@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>koara.kosodate — お問い合わせ</title><link rel="stylesheet" href="styles.css"><style>*{box-sizing:border-box}body{margin:0;background:var(--surface-page);color:var(--text-body);font:var(--type-body);-webkit-font-smoothing:antialiased}
+a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hover)}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--sp-10)}
+.eyebrow{font:var(--type-eyebrow);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--text-eyebrow)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-2);border-radius:var(--radius-pill);font-family:var(--font-jp);font-weight:var(--fw-bold);font-size:var(--fs-small);padding:11px 22px;border:1.5px solid transparent;transition:transform var(--dur-base) var(--ease-out),background var(--dur-base) var(--ease-out)}
+.btn:hover{transform:var(--hover-lift)}.btn:active{transform:var(--press-scale)}
+.btn-primary{background:var(--action-primary-bg);color:var(--action-primary-fg)}
+.btn-dark{background:var(--action-dark-bg);color:var(--action-dark-fg)}
+.btn-ghost{border-color:var(--action-ghost-border);color:var(--koara-ink)}
+.btn-white{background:#fff;color:var(--koara-ink);border-color:var(--koara-ink)}
+.btn-line{background:var(--action-line-bg);color:#fff}
+.ico{display:inline-block;width:16px;height:16px;background:currentColor;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-position:center;mask-position:center}
+.nav{height:var(--nav-h);background:var(--surface-page);border-bottom:1px solid var(--border-hairline)}
+.nav .wrap{display:flex;align-items:center;gap:var(--sp-10);height:100%}
+.nav img{height:44px;display:block}
+.nav ul{list-style:none;display:flex;gap:var(--sp-8);margin:0;padding:0;font-size:var(--fs-small);font-weight:var(--fw-bold)}
+.nav .on{color:var(--koara-coral-ink);border-bottom:2px solid var(--koara-lime);padding-bottom:2px}
+.nav .sp{flex:1}
+.crumb{font-size:var(--fs-small)}.crumb a{text-decoration:underline}.crumb i{font-style:normal;color:var(--text-muted);margin:0 6px}
+.mark{background:linear-gradient(transparent 66%,var(--marker-lime) 66%);color:var(--text-accent)}
+.tag{display:inline-block;white-space:nowrap;background:var(--koara-lime-tint);border-radius:var(--radius-pill);padding:4px 12px;font-size:var(--fs-tag);font-weight:var(--fw-bold);color:var(--koara-ink)}
+.checks{display:grid;gap:var(--sp-3)}
+.checks span{display:flex;gap:var(--sp-3);align-items:center;font:var(--fw-bold) var(--fs-caption)/1.7 var(--font-jp);color:var(--koara-ink)}
+.checks i{width:20px;height:20px;border-radius:50%;background:var(--koara-lime);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:11px}
+.sec{padding:var(--sp-20) 0}
+.sechead h2{font:var(--fw-bold) 32px/1.42 var(--font-jp);color:var(--text-strong);margin:var(--sp-3) 0 var(--sp-2)}
+.sechead p{font-size:var(--fs-small);color:var(--text-muted);margin:0}
+.arts{display:grid;gap:var(--sp-8)}
+.art{background:var(--surface-card);border:1.5px solid var(--koara-ink);border-radius:var(--radius-lg);overflow:hidden;display:block;transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out)}
+.art:hover{transform:translate(-3px,-3px);box-shadow:var(--shadow-offset-lime)}
+.art .th{height:176px;display:flex;align-items:center;justify-content:center;border-bottom:1.5px solid var(--koara-ink);position:relative}
+.art .th b{position:absolute;left:14px;top:12px;font:italic var(--fw-bold) 13px var(--font-serif);color:var(--koara-ink)}
+.art .th span{width:80px;height:72px;border:1.5px solid var(--koara-ink);border-radius:var(--radius-leaf);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.4);font:italic var(--fw-bold) 27px var(--font-serif);color:var(--koara-ink)}
+.art .bd{padding:var(--sp-5)}
+.art h3{font:var(--fw-bold) 19px/1.6 var(--font-jp);color:var(--text-strong);margin:var(--sp-3) 0 var(--sp-2)}
+.art p{font-size:var(--fs-caption);line-height:1.8;margin:0 0 var(--sp-4)}
+.art .meta{display:flex;justify-content:space-between;font-family:var(--font-label);font-size:var(--fs-caption);color:var(--text-muted)}
+.subcard{background:var(--surface-lime);border:1.5px solid var(--koara-ink);border-radius:var(--radius-xl);padding:var(--sp-16);display:grid;grid-template-columns:1fr auto;gap:var(--sp-12);align-items:center;box-shadow:10px 10px 0 var(--koara-ink)}
+.subcard h2{font:var(--fw-bold) 38px/1.48 var(--font-jp);color:var(--koara-ink);margin:var(--sp-4) 0 var(--sp-3)}
+.subcard p{font-size:var(--fs-small);color:var(--koara-ink);margin:0}
+.subcta{display:grid;gap:var(--sp-3);width:300px}
+.subcta small{font-size:var(--fs-caption);color:rgba(18,58,61,.72);text-align:center}
+.footer{background:var(--surface-ink);color:var(--text-on-ink);padding:var(--sp-16) 0 var(--sp-8)}
+.footer a{color:var(--text-on-ink);font-size:var(--fs-small)}.footer a:hover{color:var(--koara-lime)}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--sp-10)}
+.fgrid h4{font:var(--type-eyebrow);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--koara-lime);margin:0 0 var(--sp-4)}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:var(--sp-3)}
+.fmeta{display:flex;justify-content:space-between;margin-top:var(--sp-12);padding-top:var(--sp-5);border-top:1px solid rgba(255,255,255,.14);font-size:var(--fs-caption);color:rgba(238,246,240,.7)}
+.fmeta i{font-family:var(--font-serif);font-style:italic}</style></head><body>
+<header class="nav"><div class="wrap"><a href="index.html" style="display:flex;align-items:center;gap:10px"><img src="assets/logo-mascot.png" alt="koara.kosodate" style="height:44px;width:44px"><span style="font:var(--fw-bold) 19px var(--font-serif);color:var(--koara-ink)">koara.<span style="color:var(--koara-coral)">kosodate</span></span></a>
+<ul style="align-items:center"><li style="position:relative"><a href="articles.html" style="position:relative;display:inline-flex;align-items:center;padding:6px 12px 10px"><svg viewBox="0 0 120 30" preserveAspectRatio="none" style="position:absolute;left:0;right:0;bottom:2px;height:18px;width:100%;transform:rotate(-2deg)" aria-hidden="true"><path d="M2,16 C8,4 28,2 50,6 C74,10 90,3 108,9 C118,13 112,24 92,26 C64,30 26,28 8,24 C0,22 -2,20 2,16 Z" fill="var(--pastel-lime)"/></svg><span style="position:relative">記事</span></a></li><li style="position:relative"><a href="#" style="position:relative;display:inline-flex;align-items:center;padding:6px 12px 10px"><svg viewBox="0 0 120 30" preserveAspectRatio="none" style="position:absolute;left:0;right:0;bottom:2px;height:18px;width:100%;transform:rotate(1.5deg)" aria-hidden="true"><path d="M2,16 C8,4 28,2 50,6 C74,10 90,3 108,9 C118,13 112,24 92,26 C64,30 26,28 8,24 C0,22 -2,20 2,16 Z" fill="var(--pastel-pink)"/></svg><span style="position:relative">instagram</span></a></li><li style="position:relative"><a href="#" style="position:relative;display:inline-flex;align-items:center;padding:6px 12px 10px"><svg viewBox="0 0 120 30" preserveAspectRatio="none" style="position:absolute;left:0;right:0;bottom:2px;height:18px;width:100%;transform:rotate(-1deg)" aria-hidden="true"><path d="M2,16 C8,4 28,2 50,6 C74,10 90,3 108,9 C118,13 112,24 92,26 C64,30 26,28 8,24 C0,22 -2,20 2,16 Z" fill="var(--pastel-blue)"/></svg><span style="position:relative">Note</span></a></li><li><a href="index.html">発信者について</a></li></ul>
+<span class="sp"></span><a class="btn btn-line" href="#"><span class="ico" style="-webkit-mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/message-circle.svg);mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/message-circle.svg)"></span>LINE登録</a></div></header>
+
+<div style="background:linear-gradient(115deg,var(--koara-cream) 0%,var(--koara-cream) 42%,var(--surface-mint) 42%);padding:var(--sp-10) 0 var(--sp-20)">
+<div class="wrap" style="display:grid;grid-template-columns:1fr 1.15fr;gap:var(--sp-16);align-items:start">
+<div><nav class="crumb"><a href="index.html">Home</a><i>／</i>お問い合わせ</nav>
+<div class="eyebrow" style="margin-top:var(--sp-8)">Contact</div>
+<h1 style="font:var(--fw-bold) 44px/1.42 var(--font-jp);color:var(--text-strong);margin:var(--sp-5) 0">一緒に、確かな情報を<br><span class="mark">届けませんか。</span></h1>
+<p style="max-width:32ch;margin:0 0 var(--sp-8)">取材、講演、コンテンツ監修、コラボレーションなど、お気軽にご相談ください。</p>
+<div class="checks" style="margin-bottom:var(--sp-8)"><span><i>✓</i>通常3営業日以内に返信</span><span><i>✓</i>内容は外部に公開しません</span></div>
+<div style="background:#fff;border:1px solid var(--border-card);border-radius:var(--radius-md);padding:var(--sp-5) var(--sp-6);display:flex;gap:var(--sp-3);color:var(--koara-ink)"><span class="ico" style="-webkit-mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/mail.svg);mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/mail.svg)"></span>
+<div><div style="font:var(--fw-bold) var(--fs-h4)/1.7 var(--font-jp);color:var(--text-strong)">個別の医療相談について</div>
+<div style="font-size:var(--fs-small);color:var(--text-body)">診断や治療に関する個別相談には回答できません。緊急時は医療機関へご相談ください。</div></div></div></div>
+<div style="background:#fff;border:1.5px solid var(--koara-ink);border-radius:var(--radius-xl);padding:var(--sp-12) var(--sp-10);box-shadow:10px 10px 0 var(--koara-lime)">
+<div style="display:flex;gap:var(--sp-4);align-items:baseline"><span style="font:italic var(--fw-bold) 26px var(--font-serif);color:var(--koara-coral)">01</span>
+<div><h2 style="font:var(--fw-bold) 24px/1.5 var(--font-jp);color:var(--text-strong);margin:0">ご相談内容を教えてください</h2>
+<p style="font-size:var(--fs-caption);color:var(--text-muted);margin:6px 0 0">* は必須項目です</p></div></div>
+<hr style="border:0;border-top:1px solid var(--border-hairline);margin:var(--sp-6) 0 var(--sp-8)">
+<div style="display:grid;gap:var(--sp-6)">
+<div><div style="font:var(--fw-bold) var(--fs-small)/1.6 var(--font-jp);color:var(--text-strong);margin-bottom:var(--sp-3)">お問い合わせ種別 <i style="color:var(--koara-coral-ink);font-style:normal">*</i></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)">
+<label style="display:flex;align-items:center;gap:var(--sp-3);background:var(--koara-lime-tint);border:1.5px solid var(--koara-lime-deep);border-radius:var(--radius-sm);padding:14px 18px;font:var(--fw-bold) var(--fs-small)/1.5 var(--font-jp);color:var(--text-strong)">
+<span style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--koara-ink);background:#fff;display:flex;align-items:center;justify-content:center"><span style="width:8px;height:8px;border-radius:50%;background:var(--koara-ink)"></span></span>取材依頼</label><label style="display:flex;align-items:center;gap:var(--sp-3);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:14px 18px;font:var(--fw-bold) var(--fs-small)/1.5 var(--font-jp);color:var(--text-strong)">
+<span style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-card);background:#fff;display:flex;align-items:center;justify-content:center"></span>コラボ・PR依頼</label><label style="display:flex;align-items:center;gap:var(--sp-3);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:14px 18px;font:var(--fw-bold) var(--fs-small)/1.5 var(--font-jp);color:var(--text-strong)">
+<span style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-card);background:#fff;display:flex;align-items:center;justify-content:center"></span>講演依頼</label><label style="display:flex;align-items:center;gap:var(--sp-3);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:14px 18px;font:var(--fw-bold) var(--fs-small)/1.5 var(--font-jp);color:var(--text-strong)">
+<span style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-card);background:#fff;display:flex;align-items:center;justify-content:center"></span>個別相談</label><label style="display:flex;align-items:center;gap:var(--sp-3);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:14px 18px;font:var(--fw-bold) var(--fs-small)/1.5 var(--font-jp);color:var(--text-strong)">
+<span style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-card);background:#fff;display:flex;align-items:center;justify-content:center"></span>その他</label></div></div>
+<label style="display:block">
+<span style="display:flex;gap:6px;align-items:baseline;font:var(--fw-bold) var(--fs-small)/1.6 var(--font-jp);color:var(--text-strong);margin-bottom:var(--sp-2)">お名前<i style="color:var(--koara-coral-ink);font-style:normal">*</i></span>
+<input placeholder="例：山田 花子" style="width:100%;font:var(--type-body);font-size:var(--fs-small);color:var(--text-strong);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:13px 16px">
+</label>
+<label style="display:block">
+<span style="display:flex;gap:6px;align-items:baseline;font:var(--fw-bold) var(--fs-small)/1.6 var(--font-jp);color:var(--text-strong);margin-bottom:var(--sp-2)">メールアドレス<i style="color:var(--koara-coral-ink);font-style:normal">*</i></span>
+<input placeholder="example@email.com" style="width:100%;font:var(--type-body);font-size:var(--fs-small);color:var(--text-strong);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:13px 16px">
+</label>
+<label style="display:block">
+<span style="display:flex;gap:6px;align-items:baseline;font:var(--fw-bold) var(--fs-small)/1.6 var(--font-jp);color:var(--text-strong);margin-bottom:var(--sp-2)">団体名<i style="font-style:normal;font-weight:var(--fw-regular);font-size:var(--fs-caption);color:var(--text-muted)">任意</i></span>
+<input placeholder="会社名・媒体名など" style="width:100%;font:var(--type-body);font-size:var(--fs-small);color:var(--text-strong);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:13px 16px">
+</label>
+<label style="display:block">
+<span style="display:flex;gap:6px;align-items:baseline;font:var(--fw-bold) var(--fs-small)/1.6 var(--font-jp);color:var(--text-strong);margin-bottom:var(--sp-2)">ご相談内容<i style="color:var(--koara-coral-ink);font-style:normal">*</i></span>
+<textarea rows="5" placeholder="ご依頼の概要、希望時期などをご記入ください" style="width:100%;font:var(--type-body);font-size:var(--fs-small);color:var(--text-strong);background:#fff;border:1.5px solid var(--border-card);border-radius:var(--radius-sm);padding:13px 16px;resize:vertical"></textarea>
+<span style="display:block;text-align:right;font-size:var(--fs-caption);color:var(--text-muted);margin-top:6px">500文字程度まで</span></label>
+<label style="display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--text-strong)">
+<span style="width:18px;height:18px;border-radius:4px;border:1.5px solid var(--koara-ink);background:#fff"></span>
+<span><u>プライバシーポリシー</u>に同意する <i style="color:var(--koara-coral-ink);font-style:normal">*</i></span></label>
+<a class="btn btn-dark" href="thanks.html" style="width:100%">内容を送信する →</a></div></div></div></div>
+<footer class="footer"><div class="wrap"><div class="fgrid"><div>
+<div style="font:var(--fw-bold) 20px/1.5 var(--font-serif);color:#fff">koara.<span style="color:var(--koara-coral)">kosodate</span></div>
+<div class="eyebrow" style="color:rgba(238,246,240,.75);margin-top:6px">science for little minds</div>
+<p style="font-size:var(--fs-small);line-height:1.9;color:rgba(238,246,240,.8);margin:var(--sp-5) 0">子育ての「ほんと？」を、<br>脳科学でやさしく。</p>
+<div style="display:flex;gap:var(--sp-4);color:rgba(238,246,240,.9)"><span class="ico" style="-webkit-mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/camera.svg);mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/camera.svg)"></span><span class="ico" style="-webkit-mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/message-circle.svg);mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/message-circle.svg)"></span></div></div>
+<div><h4>Contents</h4><ul><li><a href="articles.html">記事一覧</a></li><li><a href="articles.html">テーマから探す</a></li><li><a href="#">デザインガイド</a></li></ul></div>
+<div><h4>About</h4><ul><li><a href="#">発信者について</a></li><li><a href="#">講演・取材・コラボ</a></li><li><a href="#">運営者情報</a></li></ul></div>
+<div><h4>Policy</h4><ul><li><a href="#">編集方針</a></li><li><a href="#">プライバシーポリシー</a></li><li><a href="#">免責事項</a></li></ul></div></div>
+<div class="fmeta"><span>© 2026 koara.kosodate</span><i>Evidence, translated with care.</i></div></div></footer>
+</body></html>
