@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>koara.kosodate — 記事詳細</title><link rel="stylesheet" href="styles.css"><style>*{box-sizing:border-box}body{margin:0;background:var(--surface-page);color:var(--text-body);font:var(--type-body);-webkit-font-smoothing:antialiased}
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>koara.kosodate — 記事詳細</title><link rel="stylesheet" href="styles.css"><style>html{scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0;background:var(--surface-page);color:var(--text-body);font:var(--type-body);-webkit-font-smoothing:antialiased}
 a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hover)}
 .wrap{max-width:var(--container);margin:0 auto;padding:0 var(--sp-10)}
 .eyebrow{font:var(--type-eyebrow);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--text-eyebrow)}
@@ -62,16 +62,16 @@ a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hove
 <div style="display:flex;gap:var(--sp-4);margin-top:4px;font-family:var(--font-label);font-size:var(--fs-caption);color:var(--text-muted)"><span>2026.09.08</span><span>6 min read</span></div></div></div></div></section>
 
 <div class="wrap" style="display:grid;grid-template-columns:200px 1fr;gap:var(--sp-16);padding:var(--sp-16) var(--sp-10);align-items:start">
-<div><div style="font:var(--fw-bold) var(--fs-small)/1.5 var(--font-jp);color:var(--text-strong);border-top:1.5px solid var(--koara-ink);padding:var(--sp-3) 0">目次</div>
+<div style="position:sticky;top:var(--sp-8)"><div style="font:var(--fw-bold) var(--fs-small)/1.5 var(--font-jp);color:var(--text-strong);border-top:1.5px solid var(--koara-ink);padding:var(--sp-3) 0">目次</div>
 <ol style="list-style:none;margin:0;padding:0;display:grid;gap:var(--sp-3)">
-<li><a href="#" style="display:block;padding-left:10px;border-left:2px solid var(--koara-coral);font:var(--fw-bold) var(--fs-caption)/1.8 var(--font-jp);color:var(--koara-coral-ink)">1. 音を聞き分ける脳</a></li><li><a href="#" style="display:block;padding-left:10px;border-left:2px solid transparent;font:var(--fw-regular) var(--fs-caption)/1.8 var(--font-jp);color:var(--text-body)">2. 鍵になるのは「生の会話」</a></li><li><a href="#" style="display:block;padding-left:10px;border-left:2px solid transparent;font:var(--fw-regular) var(--fs-caption)/1.8 var(--font-jp);color:var(--text-body)">3. 母語の土台も大切に</a></li><li><a href="#" style="display:block;padding-left:10px;border-left:2px solid transparent;font:var(--fw-regular) var(--fs-caption)/1.8 var(--font-jp);color:var(--text-body)">4. 参照した論文</a></li></ol></div>
+<li><a class="toc-link" href="#sec-1" style="display:block;padding-left:10px;border-left:2px solid var(--koara-coral);font:var(--fw-bold) var(--fs-caption)/1.8 var(--font-jp);color:var(--koara-coral-ink)">1. 音を聞き分ける脳</a></li><li><a class="toc-link" href="#sec-2" style="display:block;padding-left:10px;border-left:2px solid transparent;font:var(--fw-regular) var(--fs-caption)/1.8 var(--font-jp);color:var(--text-body)">2. 鍵になるのは「生の会話」</a></li><li><a class="toc-link" href="#sec-3" style="display:block;padding-left:10px;border-left:2px solid transparent;font:var(--fw-regular) var(--fs-caption)/1.8 var(--font-jp);color:var(--text-body)">3. 母語の土台も大切に</a></li><li><a class="toc-link" href="#sec-4" style="display:block;padding-left:10px;border-left:2px solid transparent;font:var(--fw-regular) var(--fs-caption)/1.8 var(--font-jp);color:var(--text-body)">4. 参照した論文</a></li></ol></div>
 <article style="max-width:720px">
 <div style="background:linear-gradient(135deg,var(--pastel-blue),var(--pastel-lime));border:1.5px solid var(--koara-ink);border-radius:var(--radius-lg);height:200px;display:flex;align-items:center;justify-content:center;gap:var(--sp-5);margin-bottom:var(--sp-10);color:var(--koara-ink)">
 <span class="ico" style="width:38px;height:38px;-webkit-mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/book-open.svg);mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/book-open.svg)"></span>
 <div style="font:var(--fw-bold) 20px/1.6 var(--font-serif);letter-spacing:.08em">EARLY LANGUAGE<br>× BRAIN</div></div>
 <p style="font:var(--fw-bold) var(--fs-lead)/1.9 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-8)">赤ちゃんは、生まれたときから世界中の言語の音を聞き分ける可能性を持っています。その能力は、生後1年のあいだに身近な言語へと最適化されていきます。</p>
 <div style="font:italic var(--fw-bold) 13px var(--font-serif);color:var(--koara-coral);margin-bottom:6px">01</div>
-<h2 style="font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">音を聞き分ける脳は、どう変わる？</h2>
+<h2 id="sec-1" style="scroll-margin-top:var(--sp-8);font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">音を聞き分ける脳は、どう変わる？</h2>
 <p style="margin:0 0 var(--sp-6)">ワシントン大学の研究では、アメリカと日本の乳児を対象に、英語の「R」と「L」にあたる音の聞き分けを調べました。生後6〜8か月では両グループに大きな差はありませんでしたが、10〜12か月になると、身近な言語環境に応じた変化が見られました。</p>
 <div style="background:var(--surface-quote);border-left:4px solid var(--koara-coral);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:var(--sp-5) var(--sp-6);margin-bottom:var(--sp-6)">
 <div style="font:var(--fw-bold) var(--fs-h4)/1.7 var(--font-jp);color:var(--text-strong)">脳は「使っている音」に合わせて、より効率よく情報を処理するようになります。</div>
@@ -84,7 +84,7 @@ a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hove
 <p style="font-size:var(--fs-caption);color:var(--text-muted);margin:var(--sp-4) 0 0">乳児期後半に、母語の音への選択的な感度が高まる</p></div>
 <div style="background:var(--surface-info);border-radius:var(--radius-md);padding:var(--sp-5) var(--sp-6);display:flex;gap:var(--sp-3);margin-bottom:var(--sp-10);color:var(--koara-ink)"><span class="ico" style="-webkit-mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/info.svg);mask-image:url(https://unpkg.com/lucide-static@0.544.0/icons/info.svg)"></span><div style="font-size:var(--fs-small);color:var(--text-body)">これは「早く始めないと身につかない」という話ではありません。音の知覚と、その後の語彙・文法の学習は分けて考える必要があります。</div></div>
 <div style="font:italic var(--fw-bold) 13px var(--font-serif);color:var(--koara-coral);margin-bottom:6px">02</div>
-<h2 style="font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">鍵になるのは「生の会話」</h2>
+<h2 id="sec-2" style="scroll-margin-top:var(--sp-8);font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">鍵になるのは「生の会話」</h2>
 <p style="margin:0 0 var(--sp-6)">別の実験では、乳児が中国語話者と直接交流した場合と、同じ内容を映像や音声で目隠しした場合が比べられました。音を学習したのは、生身の人とやり取りしたグループでした。</p>
 <div class="checks" style="margin-bottom:var(--sp-6)"><span><i>✓</i>子どもが見ているものに言葉を添える</span><span><i>✓</i>反応を待ち、表情や声に返す</span><span><i>✓</i>教材は「会話のきっかけ」として使う</span></div>
 <div style="background:var(--surface-note);border:1.5px solid var(--koara-ink);border-radius:var(--radius-md);padding:var(--sp-5) var(--sp-6);box-shadow:6px 6px 0 var(--koara-ink);margin-bottom:var(--sp-10)">
@@ -92,11 +92,11 @@ a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hove
 <div style="font:var(--fw-bold) var(--fs-h4)/1.7 var(--font-jp);color:var(--text-strong);margin:var(--sp-2) 0">「英語を聞かせる」より、一緒に楽しむ時間を。</div>
 <div style="font-size:var(--fs-small)">音だけを流しても、赤ちゃんの学習は進みにくいことが示されています。短い時間でも、目を合わせて、子どもの反応に応える方が大切です。</div></div>
 <div style="font:italic var(--fw-bold) 13px var(--font-serif);color:var(--koara-coral);margin-bottom:6px">03</div>
-<h2 style="font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">焦らず、母語の土台も大切に</h2>
+<h2 id="sec-3" style="scroll-margin-top:var(--sp-8);font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">焦らず、母語の土台も大切に</h2>
 <p style="margin:0 0 var(--sp-6)">第二言語の学びは、母語の発達と対立するものではありません。家庭で最も自然に、豊かに話せる言葉で対話することが、考える力や概念の土台をつくります。</p>
 <div style="background:var(--surface-ink);color:var(--text-on-ink);border-radius:var(--radius-md);padding:var(--sp-5) var(--sp-6);font-size:var(--fs-small);margin-bottom:var(--sp-12)"><b style="font-family:var(--font-label);letter-spacing:.12em;color:var(--koara-lime)">NOTE</b>　この記事は一般的な情報で、個別の診断や治療に代わるものではありません。</div>
 <div style="font:italic var(--fw-bold) 13px var(--font-serif);color:var(--koara-coral);margin-bottom:6px">04</div>
-<h2 style="font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">参照した論文</h2>
+<h2 id="sec-4" style="scroll-margin-top:var(--sp-8);font:var(--fw-bold) 26px/1.6 var(--font-jp);color:var(--text-strong);margin:0 0 var(--sp-4)">参照した論文</h2>
 <div style="display:grid;gap:var(--sp-4);margin-bottom:var(--sp-12)">
 <div style="display:flex;gap:var(--sp-4);background:#fff;border:1px solid var(--border-card);border-radius:var(--radius-md);padding:var(--sp-5)">
 <span style="width:30px;height:30px;flex:0 0 auto;border-radius:var(--radius-xs);background:var(--pastel-blue);display:flex;align-items:center;justify-content:center;font:italic var(--fw-bold) 14px var(--font-serif);color:var(--koara-ink)">P</span>
@@ -139,4 +139,17 @@ a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hove
 <div><h4>About</h4><ul><li><a href="#">発信者について</a></li><li><a href="#">講演・取材・コラボ</a></li><li><a href="#">運営者情報</a></li></ul></div>
 <div><h4>Policy</h4><ul><li><a href="#">編集方針</a></li><li><a href="#">プライバシーポリシー</a></li><li><a href="#">免責事項</a></li></ul></div></div>
 <div class="fmeta"><span>© 2026 koara.kosodate</span><i>Evidence, translated with care.</i></div></div></footer>
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc-link'));
+  var targets = links.map(function(l){ return document.querySelector(l.getAttribute('href')); });
+  function sync(){
+    var pos = window.scrollY + 120, cur = 0;
+    targets.forEach(function(t, i){ if (t && t.offsetTop <= pos) cur = i; });
+    links.forEach(function(l, i){ l.classList.toggle('active', i === cur); });
+  }
+  window.addEventListener('scroll', sync, {passive:true});
+  sync();
+})();
+</script>
 </body></html>
